@@ -1,0 +1,37 @@
+@url = http://localhost:3000
+
+### ver todos los calculos
+GET {{url}}/calculos
+
+###
+
+### ver calculo id
+GET {{url}}/calculos/4
+
+###
+
+### Calcular perímetro y superficie
+POST {{url}}/calculos
+Content-Type: application/json
+
+{
+  "base": 10,
+  "altura": 5
+}
+
+###
+
+###cambiar los calculos
+PUT {{url}}/calculos/2
+Content-Type: application/json
+
+{
+  "base": 6,
+  "altura": 6
+}
+
+###
+
+### borrar los cálculos
+DELETE {{url}}/calculos/4
+

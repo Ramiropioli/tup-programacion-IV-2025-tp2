@@ -1,0 +1,33 @@
+@url = http://localhost:5000
+### Ver todas las materias
+GET {{url}}/materias
+
+###
+
+### Ver materia id
+GET {{url}}/materias/2
+
+###
+
+### Agregar materia
+POST {{url}}/materias
+Content-Type: application/json
+
+{
+  "nombre": "portugues"
+}
+
+###
+ 
+### Editar materia
+PUT {{url}}/materias/2
+Content-Type: application/json
+
+{
+  "nombre": "programacion"
+}
+
+###
+
+### Borrar materia
+DELETE {{url}}/materias/7

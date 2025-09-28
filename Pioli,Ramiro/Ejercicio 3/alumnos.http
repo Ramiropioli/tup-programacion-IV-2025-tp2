@@ -1,0 +1,43 @@
+@url = http://localhost:5000
+### Ver todos los alumnos
+GET {{url}}/alumnos
+
+###
+
+### Ver alumno id
+GET {{url}}/alumnos/11
+
+###
+
+### Agregar alumno nuevo
+POST {{url}}/alumnos
+Content-Type: application/json
+
+{
+  "alumnos": "andy murray",
+  "materia_id":12,
+  "nota1": 10,
+  "nota2": 8,
+  "nota3": 6 
+}
+
+###
+
+
+### editar alumno
+PUT {{url}}/alumnos/4
+Content-Type: application/json
+
+{
+  "alumnos":"novak djokovic",
+  "materia_id":3,
+  "nota1": 8,
+  "nota2": 7,
+  "nota3": 9
+}
+
+###
+
+### borrar alumno
+DELETE {{url}}/alumnos/10
+

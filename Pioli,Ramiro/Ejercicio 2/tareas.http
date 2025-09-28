@@ -1,0 +1,46 @@
+@url = http://localhost:4000
+
+### Ver todas las tareas
+GET {{url}}/tareas
+
+###
+
+### Ver tarea id
+GET {{url}}/tareas/3
+
+###
+
+### Ver solo tareas completadas
+GET {{url}}/tareas?completadas=true
+
+###
+
+### Ver solo tareas incompletas
+GET {{url}}/tareas?completadas=false
+
+### 
+
+### Agregar tareas
+POST {{url}}/tareas
+Content-Type: application/json
+
+{
+  "tarea": "jugar tenis",
+  "terminado": true
+}
+
+###
+
+### editar tareas
+PUT {{url}}/tareas/3
+Content-Type: application/json
+
+{
+  "tarea": "programar",
+  "terminado": true
+}
+
+###
+
+### borrar tareas
+DELETE {{url}}/tareas/5
